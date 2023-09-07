@@ -13,14 +13,14 @@ body, html {
 .container {
     text-align: center;
     background: rgba(0, 0, 0, 0.1); /* Slight transparency to the container for a modern touch */
-    padding: 40px 60px;
+    padding: 5px 5px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Shadow for depth */
 }
 
 .text {
     font-size: 0.7em;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 h1 {
