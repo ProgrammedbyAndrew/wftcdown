@@ -65,27 +65,13 @@ function calculateCurrentCount() {
 }
 
 // Initial update
-document.getElementById('customerCount').textContent = calculateCurrentCount();
+document.getElementById('customerCount').textContent = calculateCurrentCount().toLocaleString();
 
 // Update every second
 setInterval(() => {
     const now = new Date();
     if (isCountingTime(now)) {
         currentCustomerCount += getDynamicRate(now);
-        document.getElementById('customerCount').textContent = Math.floor(currentCustomerCount);
+        document.getElementById('customerCount').textContent = Math.floor(currentCustomerCount).toLocaleString();
     }
 }, 1000);
-
-// Simulation (optional, for verification purposes)
-function simulateToEnd() {
-    let simulationCount = startingCount;
-    for (let i = 0; i < (endDate - startDate) / 1000; i++) {
-        const tempDate = new Date(startDate.getTime() + i * 1000);
-        if (isCountingTime(tempDate)) {
-            simulationCount += getDynamicRate(tempDate);
-        }
-    }
-    return simulationCount;
-}
-
-console.log("Simulation result:", simulateToEnd());
